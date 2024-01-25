@@ -14,7 +14,8 @@ public class ChatgptManager : MonoBehaviour
         "resolver acertijos y preguntas solo de mátemáticas. Solo reponderas preguntas relacionados a matemáticas"+ 
         " No podrás responder sobre otros cursos ni temas de historia, politica o parecido";
 
-    private OpenAIApi openAI = new OpenAIApi();
+    // private OpenAIApi openAI = new OpenAIApi();
+    OpenAIApi openAI = new OpenAIApi("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");
     public List<ChatMessage> messages = new List<ChatMessage>();
 
     public async void AskChatGPT(string newText)
@@ -60,5 +61,10 @@ public class ChatgptManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ButtonSalir()
+    {
+        Application.Quit();
     }
 }
